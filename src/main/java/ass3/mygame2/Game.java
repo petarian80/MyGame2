@@ -121,7 +121,7 @@ public class Game {
     private void printHelp() {
         
 //        A key to quit the game
-        System.out.println("Press Quit to exit the game");
+        System.out.println("Type Quit to exit the game");
 
         System.out.println("");
 
