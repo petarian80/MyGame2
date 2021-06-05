@@ -9,6 +9,7 @@
  * @version 2016.02.29
  */
 package ass3.mygame2;
+import java.util.Random;
 
 public class CommandWords
 {
@@ -20,9 +21,10 @@ public class CommandWords
     /**
      * Constructor - initialise the command words.
      */
-    public CommandWords()
+    public String CommandWords()
     {
         // nothing to do at the moment...
+        return validCommands[4] + " coffee again";
     }
 
     /**

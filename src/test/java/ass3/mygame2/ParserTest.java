@@ -33,9 +33,10 @@ public class ParserTest extends TestCase {
         Parser instance = new Parser();
         Command expResult = null;
         Command result = instance.getCommand();
-        assertEquals(expResult, result);
+        System.out.println(result.getCommandWord() + " " + result.getSecondWord() + " " + result.getThirdWord());
+        // assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -46,14 +47,14 @@ public class ParserTest extends TestCase {
         Parser instance = new Parser();
         instance.showCommands();
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     private void assertEquals(Command expResult, Command result) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void fail(String the_test_case_is_a_prototype) {
+    public static void fail(String the_test_case_is_a_prototype) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     

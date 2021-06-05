@@ -180,11 +180,11 @@ public class RoomTest extends TestCase {
         fail("The test case is a prototype.");
     }
 
-    private void fail(String the_test_case_is_a_prototype) {
+    public static void fail(String the_test_case_is_a_prototype) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void assertEquals(String expResult, String result) {
+    public static void assertEquals(String expResult, String result) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

@@ -11,7 +11,7 @@ import java.util.ArrayList;
  * @version 2016.02.29
  */
 
-public class Room 
+public class Room
 {
     private String description;
     private String name;

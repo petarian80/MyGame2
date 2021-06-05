@@ -36,7 +36,7 @@ public class RoomCreationTest extends TestCase {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    private void fail(String the_test_case_is_a_prototype) {
+    public static void fail(String the_test_case_is_a_prototype) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
