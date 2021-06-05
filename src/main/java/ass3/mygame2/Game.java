@@ -50,6 +50,7 @@ public class Game {
      * Main play routine. Loops until end of play.
      */
     public void play() {
+
         printWelcome();
 
         // Enter the main command loop.  Here we repeatedly read commands and
@@ -103,7 +104,7 @@ public class Game {
         } else if (commandWord.equals("drop")) {
             dropItem(command);
         } else if (commandWord.equals("use")) {
-            //useItem(command);
+            useItem(command);
         } else if (commandWord.equals("inspect")) {
             //lookItem(command);
         } else if (commandWord.equals("quit")) {
@@ -144,6 +145,7 @@ public class Game {
      * otherwise print an error message.
      */
     private void goRoom(Command command) {
+
         if (!command.hasSecondWord()) {
             // if there is no second word, we don't know where to go...
             System.out.println("Go where?");
@@ -205,12 +207,22 @@ public class Game {
         Item currentItem = player.getPlayerItem(itemFromCommand);
         //getPlayerItem(itemFromCommand);
 
-        if (currentItem == null) {
+        String itemTrainingCommand = command.getThirdWord();
+
+        if (itemFromCommand == null) {
             System.out.println("You can't take nothing, no?");
         } else {
-            // Do the transaction here
-            player.removeItemInventory(currentItem);
-            currentRoom.addItemInRoom(currentItem);
+
+            if(itemTrainingCommand.equalsIgnoreCase("all")){
+
+                player.dropAllItems();
+            }else{
+                // Do the transaction here
+                player.removeItemInventory(currentItem);
+                currentRoom.addItemInRoom(currentItem);
+
+            }
+
 
             //removeItemInventory(currentItem);
             //roomItem.put(currentItem, currentRoom);
@@ -226,10 +238,19 @@ public class Game {
             return;
         }
 
-        String itemFromCommand = command.getSecondWord();
-        Item currentItem = currentRoom.getRoomItem(itemFromCommand);
+        if (!command.hasThirdWord()) {
+            // if there is no second word, we don't know where to go...
+            System.out.println("what for?");
+            return;
+        }
 
-        if (currentItem == null) {
+        String itemFromCommand = command.getSecondWord();
+//        Item currentItem = currentRoom.getRoomItem(itemFromCommand);
+
+        String itemTrainingCommand = command.getThirdWord();
+//        Item currentQItem = currentRoom.getRoomItem(itemTrainingCommand);
+
+        if (itemFromCommand == null) {
             System.out.println("You can't use nothing, no?");
         } else {
             // you want make sure that the currentRoom is the room where you want to open the door (before the nextdoor).
@@ -237,7 +258,12 @@ public class Game {
 
             //if(currentRoom.getName().equals("castle") && currentItem.getName().equals("key")){
             //.setLockedStatus(false);
-            System.out.println("You just used the " + currentItem.getName());
+//            System.out.println("You just used the " + currentItem.getName());
+//            System.out.println("You just used the third command" + currentQItem.getName());
+
+            System.out.println("Command will be executed :  " + itemFromCommand + " " + itemTrainingCommand  );
+
+
 
             //if(currentRoom.getName().equals("frontYard") && currentItem.getName().equals("item1")){
             //frontGate.setLockedStatus(false);
@@ -245,7 +271,7 @@ public class Game {
             // //currentRoom.checkRoom("castle");
             // roomKey.get(currentItem).setLockedStatus(false);
             // }
-            System.out.println("You cannot use this item here");
+//            System.out.println("You cannot use this item here");
 
         }
 

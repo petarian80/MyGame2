@@ -122,6 +122,17 @@ public class Room
         return itemToReturn;
     }
 
+    public Item getItemFor(String stringItem){
+        Item itemToReturn = null;
+        for(Item item: roomItem){
+            if(item.getName().contains(stringItem)){
+                itemToReturn = item;
+            }
+        }
+        return itemToReturn;
+    }
+
+
     public void addItemInRoom(Item item){
         roomItem.add(item);
     }
