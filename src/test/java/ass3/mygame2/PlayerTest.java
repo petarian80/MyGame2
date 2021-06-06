@@ -41,11 +41,11 @@ public class PlayerTest extends TestCase {
      */
     public void testAddItemInventory() {
         System.out.println("addItemInventory");
-        Item item = null;
+        Item item = new Item("fan", "black", 2);
         Player instance = new Player();
         instance.addItemInventory(item);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**

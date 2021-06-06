@@ -25,19 +25,19 @@ public class ParserTest extends TestCase {
         super.tearDown();
     }
 
-    /**
-     * Test of getCommand method, of class Parser.
-     */
-    public void testGetCommand() {
-        System.out.println("getCommand");
-        Parser instance = new Parser();
-        Command expResult = null;
-        Command result = instance.getCommand();
-        System.out.println(result.getCommandWord() + " " + result.getSecondWord() + " " + result.getThirdWord());
-        // assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
+//    /**
+//     * Test of getCommand method, of class Parser.
+//     */
+//    public void testGetCommand() {
+//        System.out.println("getCommand");
+//        Parser instance = new Parser();
+//        Command expResult = null;
+//        Command result = instance.getCommand();
+////        System.out.println(result.getCommandWord() + " " + result.getSecondWord() + " " + result.getThirdWord());
+//        // assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        //fail("The test case is a prototype.");
+//    }
 
     /**
      * Test of showCommands method, of class Parser.
